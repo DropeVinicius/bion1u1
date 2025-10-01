@@ -600,7 +600,12 @@
             justify-content: center;
             align-items: center;
         }
-
+        .modal img {
+            max-width: 90%;   /* deixa 10% de espaço nas laterais */
+            max-height: 90%;  /* deixa 10% de espaço em cima/baixo */
+            object-fit: contain;
+            border-radius: 8px; /* opcional para estética */
+        }
         /* Imagem no modal */
         .modal-content {
             max-width: 90%;
@@ -1466,14 +1471,13 @@
             display: flex;
             align-items: center; /* centraliza verticalmente imagem e texto */
             justify-content: center;
-            gap: 30px;
             flex-wrap: wrap; /* quebra em telas menores */
         }
 
         /* Imagem */
         .lado-imagem {
-            flex: 1 1 40%;
-            text-align: center;
+            flex: 1 1 41%;
+            text-align: center !important;
         }
 
         .lado-imagem img {
@@ -1486,9 +1490,9 @@
 
         /* Fonte abaixo da imagem */
         .lado-imagem .fonte-imagem {
-            font-size: 12px;
+            font-size: 10px !important;
             color: #555;
-            text-align: left;
+            text-align: justify !important;
             margin-left: 5px;
         }
 
@@ -2461,7 +2465,7 @@
                     <br>
                     <!-- Imagem -->
                     <div class="figura-container">
-                        <img class="zoomable" src="https://res.cloudinary.com/di4ria1pf/image/upload/v1758840222/Figura_03_htqfip.png"
+                        <img class="zoomable" src="https://res.cloudinary.com/di4ria1pf/image/upload/v1759351456/unnamed_ayij1c.webp"
                             alt="Retrato de Antony van Leeuwenhoek e seus microscópios">
                     </div>
                 
@@ -2489,7 +2493,7 @@
                     <div class="conteudo-horizontal">
                         <!-- Imagem + Fonte -->
                         <div class="lado-imagem">
-                            <img class="zoomable" src="https://res.cloudinary.com/di4ria1pf/image/upload/v1758840221/figura_04_ajgdhs.png"
+                            <img class="zoomable" src="https://res.cloudinary.com/di4ria1pf/image/upload/v1759347353/figura_04_e30hqy.png"
                                 alt="Microscópio ilustrado por Robert Hooke">
                             <p class="fonte-imagem"><strong><i>Fonte</strong>: Robert Hooke / Wikimedia Commons.</i></p>
                             <div class="lado-texto">
@@ -2846,6 +2850,12 @@
                                 favo de mel (...) Além disso, esses poros, ou células, não eram muito fundos e sim
                                 constituídos de um grande número de pequenas caixas (...)” (in Amabis; Martho, 1985);
                             </p>
+                            <br>
+                            <p class="descricao-figura">
+                                <strong>Descrição da imagem:</strong>
+                                A figura apresenta uma ilustração circular em preto e branco mostrando a estrutura celular
+                                da cortiça com várias cavidades dispostas em padrão regular, semelhante a uma colmeia.
+                            </p>
                         </div>
                 
                         <!-- Imagem + Título + Fonte à direita -->
@@ -2868,14 +2878,7 @@
                 
                     </div>
                 
-                    <!-- Descrição abaixo, largura total -->
-                    <div class="lado-texto">
-                        <p class="descricao-figura">
-                            <strong>Descrição da imagem:</strong>
-                            A figura apresenta uma ilustração circular em preto e branco mostrando a estrutura celular
-                            da cortiça com várias cavidades dispostas em padrão regular, semelhante a uma colmeia.
-                        </p>
-                    </div>
+                    
                 </section>
                 <br>
                 <p>
@@ -3157,7 +3160,7 @@
                 <br>
                 <!-- Imagem -->
                 <div class="figura-container">
-                    <img class="zoomable" src="https://res.cloudinary.com/di4ria1pf/image/upload/v1759215395/Figura_20_gwuuqt.png"
+                    <img class="zoomable" src="https://res.cloudinary.com/di4ria1pf/image/upload/v1759348409/Figura_20_gb7eia.jpg"
                         alt="Esquema da formação da imagem em um microscópio óptico simples.">
                 </div>
             
@@ -3244,7 +3247,7 @@
                 <br>
                 <!-- Imagem -->
                 <div class="figura-container">
-                    <img class="zoomable" src="https://res.cloudinary.com/di4ria1pf/image/upload/v1759273715/Figura_22_wubmc5.png"
+                    <img class="zoomable" src="https://res.cloudinary.com/di4ria1pf/image/upload/v1759348409/Figura_22_c0jlgz.jpg"
                         alt="Esquema da formação da imagem em um microscópio óptico simples.">
                 </div>
             
@@ -3324,7 +3327,7 @@
                             <br>
                             <h3 class="titulo-slider"><span class="figura"><strong>Figura 24</strong>.</span> Preparação a fresco de Saccharomyces cerevisiae.</h3>
                             <img class="zoomable"
-                                src="https://res.cloudinary.com/di4ria1pf/image/upload/v1759274311/Figura_24_g260wz.png"
+                                src="https://res.cloudinary.com/di4ria1pf/image/upload/v1759348608/Figura_24_gkdd1i.jpg"
                                 alt="Célula parietal.">
                             <p class="fonte-imagem"><strong><i>Fonte</strong>: UFRGS [s. d.].</i></p>
                             <p class="descricao-slider"> <strong>Descrição da imagem:</strong>
@@ -3467,7 +3470,7 @@
                 <br>
                 <!-- Imagem -->
                 <div class="figura-container">
-                    <img class="zoomable" src="https://res.cloudinary.com/di4ria1pf/image/upload/v1759275594/Figura_27_iofp8w.png"
+                    <img class="zoomable" src="https://res.cloudinary.com/di4ria1pf/image/upload/v1759351524/Figura_27_oclbkx.png"
                         alt="Esquema da formação da imagem em um microscópio óptico simples.">
                 </div>
             
@@ -3796,7 +3799,7 @@
                     <br>
                     <!-- Imagem -->
                     <div class="figura-container">
-                        <img class="zoomable" src="https://res.cloudinary.com/di4ria1pf/image/upload/v1759345426/Figura_33_asvfsb.png"
+                        <img class="zoomable" src="https://res.cloudinary.com/di4ria1pf/image/upload/v1759346489/Figura_03_n7a9sn.png"
                             alt="Tipos de vírus.">
                     </div>
                 
@@ -3828,11 +3831,11 @@
                     <!-- Título -->
                     
                     <h3 class="titulo-figura"><span class="figura"><strong>Figura 34</strong>.</span> Os quatro tipos de microscópio.</h3>
-                                        <h3 class="titulo-figura">Microscópios</h3>
+                
                     <br>
                     <!-- Imagem -->
                     <div class="figura-container">
-                        <img class="zoomable" src="https://res.cloudinary.com/di4ria1pf/image/upload/v1759300879/Figura_34_pmkets.png"
+                        <img class="zoomable" src="https://res.cloudinary.com/di4ria1pf/image/upload/v1759348813/Figura_34_ramzup.jpg"
                             alt="">
                     </div>
                 
@@ -4264,6 +4267,7 @@
         
 
     <script>
+        
        // Navbar
         document.querySelector('.menu-toggle').addEventListener('click', () => {
             const menu = document.querySelector('.navbar ul');
