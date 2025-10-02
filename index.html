@@ -2230,7 +2230,79 @@
         .paragraforeduzido {
             font-size: 14px;
         }
-        
+                /* Container */
+        .video-play-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 30px 0;
+        }
+
+        /* Botão circular */
+        .video-play-btn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(145deg, #017A5A, #015A42); /* Gradiente verde */
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            color: #FFF;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            font-size: 55px;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+        }
+
+        /* Efeito pulsante */
+        .video-play-btn::after {
+            content: "";
+            position: absolute;
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 2px solid rgba(1,90,66,0.6);
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); opacity: 0.6; }
+            70% { transform: scale(1.3); opacity: 0; }
+            100% { transform: scale(1); opacity: 0; }
+        }
+
+        .video-play-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+        }
+
+        /* Texto abaixo */
+        .video-play-text {
+            margin-top: 10px;
+            font-family: 'Roboto', sans-serif;
+            font-size: 16px;
+            color: #015A42;
+            font-weight: 600;
+        }
+
+        /* Responsivo */
+        @media (max-width: 768px) {
+            .video-play-btn {
+                width: 70px;
+                height: 70px;
+                font-size: 35px;
+            }
+
+            .video-play-btn::after {
+                width: 85px;
+                height: 85px;
+            }
+
+            .video-play-text {
+                font-size: 14px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -2445,9 +2517,9 @@
                             <p>
                                 As aprimorações continuaram a ser feitas e o microscópio de Robert Hooke (1635-1703)
                                 ganhou mais uma lente, permitindo que as imagens fossem ampliadas cada vez mais. Suas
-                                observações foram publicadas em 1665, no livro Micrographia, que era composto também por
+                                observações foram publicadas em 1665, no livro <i>Micrographia</i>, que era composto também por
                                 ilustrações feitas por ele mesmo a partir de suas observações. Por meio de seu microscópio
-                                composto, melhorou a ampliação para cerca de 40 diâmetros, os populares tinham capacidade
+                                composto, melhorou a ampliação para <i>cerca de 40 diâmetros</i>, os populares tinham capacidade
                                 para ampliar apenas 10 vezes aproximadamente, introduziu uma lente intermediária entre
                                 a objetiva e a ocular para ampliar o campo de visão do objeto e aumentar a luminosidade,
                                 utilizou luz difusa em vez de luz solar direta, evitando assim os fortes reflexos e, para melhor
@@ -2465,7 +2537,7 @@
                     <br>
                     <!-- Imagem -->
                     <div class="figura-container">
-                        <img class="zoomable" src="https://res.cloudinary.com/di4ria1pf/image/upload/v1759351456/unnamed_ayij1c.webp"
+                        <img class="zoomable" src="https://res.cloudinary.com/di4ria1pf/image/upload/v1759352121/Figura_03_yhd4gf.jpg"
                             alt="Retrato de Antony van Leeuwenhoek e seus microscópios">
                     </div>
                 
@@ -2489,32 +2561,30 @@
                 
                     <!-- Título -->
                     <h3 class="titulo-figura"><span class="figura"><strong>Figura 4</strong>.</span> Microscópio ilustrado por Robert Hooke.</h3>
-                    <br>
+                
                     <div class="conteudo-horizontal">
                         <!-- Imagem + Fonte -->
                         <div class="lado-imagem">
                             <img class="zoomable" src="https://res.cloudinary.com/di4ria1pf/image/upload/v1759347353/figura_04_e30hqy.png"
                                 alt="Microscópio ilustrado por Robert Hooke">
                             <p class="fonte-imagem"><strong><i>Fonte</strong>: Robert Hooke / Wikimedia Commons.</i></p>
-                            <div class="lado-texto">
-                                <p class="descricao-figura">
-                                    <strong>Descrição da imagem:</strong>
-                                    A imagem apresenta uma ilustração em preto e branco de um microscópio composto desenhado por Robert
-                                    Hooke. O aparelho tem formato cilíndrico, está apoiado sobre uma base com articulações e possui um
-                                    espelho na parte inferior.
-                                </p>
-                            </div>
                         </div>
                 
                         <!-- Texto -->
                         <div class="lado-texto">
                             <p class="paragrafo-figura">
-                                Na publicação de Micrographia, Hooke ainda descreve a
+                                Na publicação de <i>Micrographia</i>, Hooke ainda descreve a
                                 construção de um microscópio com uma única lente esférica,
                                 a qual, mesmo minúscula, seria capaz de ampliar cerca de
                                 200 ou 300 vezes. Como ele não publicou a imagem desse
                                 microscópio no livro, muitos chegaram a duvidar da existência
                                 de tal aparelho.
+                            </p>
+                            <p class="descricao-figura">
+                                <strong>Descrição da imagem:</strong>
+                                A imagem apresenta uma ilustração em preto e branco de um microscópio composto desenhado por Robert
+                                Hooke. O aparelho tem formato cilíndrico, está apoiado sobre uma base com articulações e possui um
+                                espelho na parte inferior.
                             </p>
                         </div>
                     </div>
@@ -2613,9 +2683,9 @@
                     telescópios e microscópios. Utilizando uma vela como fonte de iluminação e explorando seus interesses
                     microscópicos, também fez diversas observações, incluindo uma pulga, uma formiga, folhas, fios de
                     seda, areia, mofo, cogumelo, cortiça e muito mais. Algumas de suas observações geraram minuciosas
-                    ilustrações de grande importância, publicadas no livro “Micrographia or some physiological descriptions of
-                    minute bodies made by magnifying glasses with observations and inquiries thereupon”, onde se encontra
-                    a primeira descrição conhecida do fungo Mucor (Attias, 2010).
+                    ilustrações de grande importância, publicadas no livro “<i>Micrographia or some physiological descriptions of
+                    minute bodies made by magnifying glasses with observations and inquiries thereupon</i>”, onde se encontra
+                    a primeira descrição conhecida do fungo <i>Mucor</i> (Attias, 2010).
                 </p>
                 <br>
                 <!-- Bloco de Figura Estática -->
@@ -2637,9 +2707,9 @@
                     <!-- Descrição -->
                     <p class="descricao-figura">
                         <strong>Descrição da imagem:</strong>
-                        A imagem apresenta a página de rosto do livro Micrographia, publicado por
+                        A imagem apresenta a página de rosto do livro <i>Micrographia</i>, publicado por
                         Robert Hooke em 1665. O título ocupa a parte superior da página com letras em diferentes tamanhos
-                        e estilos, destacando as palavras “MICROGRAPHIA” e “MINUTE BODIES” em letras maiúsculas
+                        e estilos, destacando as palavras <i>“MICROGRAPHIA” e “MINUTE BODIES”</i> em letras maiúsculas
                         vermelhas. Abaixo do título, há informações sobre o conteúdo da obra, centradas na descrição
                         fisiológica de pequenos corpos observados com lentes de aumento. No centro inferior da página, há
                         uma ilustração do brasão da Royal Society, com dois animais sustentando um escudo. Abaixo, consta
@@ -2697,7 +2767,7 @@
                                     O inseto é mostrado em vista lateral, com corpo segmentado, patas articuladas e
                                     cabeça voltada para a direita. A ampliação revela estruturas minuciosas, como as
                                     articulações das pernas e a textura do exoesqueleto, destacando o rigor científico e
-                                    artístico característico da obra Micrographia.
+                                    artístico característico da obra <i>Micrographia</i>.
                                 </p>
                             </div>
 
@@ -2715,7 +2785,7 @@
                                     inseto está representado em vista dorsal, com as asas abertas e simétricas, corpo
                                     segmentado, pernas finas e antenas alongadas. A ampliação permite visualizar as
                                     estruturas anatômicas com precisão, evidenciando o nível de detalhe que Hooke
-                                    alcançou em seus estudos publicados na obra Micrographia.
+                                    alcançou em seus estudos publicados na obra <i>Micrographia</i>.
                                 </p>
                             </div>
 
@@ -2769,7 +2839,7 @@
                                     A imagem apresenta um microscópio de Edmund Culpeper,
                                     exposto em uma vitrine. O instrumento possui um tubo cilíndrico decorado, sustentado
                                     por uma base tripla com estrutura metálica. A parte inferior inclui um espelho curvado e
-                                    mecanismos de ajuste. O design é característico do início do século XVIII, combinando
+                                    mecanismos de ajuste. O <i>design</i> é característico do início do século XVIII, combinando
                                     funcionalidade com elementos ornamentais. O microscópio está posicionado sobre
                                     uma superfície branca, com iluminação neutra ao fundo.
                                 </p>
@@ -3004,11 +3074,14 @@
                         Assista ao vídeo abaixo:
                     </h1>
                 </div>
-                <!-- Ícone de Play -->
-                <div class="play-icon" data-video="https://drive.google.com/file/d/1qDHVOsf2PCPg-kKxq9J8FcxPNY1j7VKs/preview"
-                    onclick="openVideoModal(this)">
-                    <i class='bx bx-play-circle'></i>
+                <div class="video-play-wrapper">
+                    <div class="video-play-btn" data-video="https://drive.google.com/file/d/1qDHVOsf2PCPg-kKxq9J8FcxPNY1j7VKs/preview"
+                        onclick="openVideoModal(this)">
+                        <i class='bx bx-play'></i>
+                    </div>
+                    <div class="video-play-text">Clique para assistir</div>
                 </div>
+
                 </div>
                 <!-- Modal com o vídeo -->
                 <div id="videoModal" class="video-modal" onclick="closeVideoModal()">
@@ -3297,19 +3370,19 @@
                         <!-- SLIDE 17 -->
                         <div class="slide ativo">
                             <p class="descricao-slider"> <strong>1.</strong>
-                                Preparação a fresco de E. coli. Após flambar a alça, colocar uma gota de suspensão
+                                Preparação a fresco de <i>E. coli.</i> Após flambar a alça, colocar uma gota de suspensão
                                 bacteriana em uma lâmina, cobrir com lamínula. Adicionar uma pequena gota de óleo de
                                 cedro e observar com objetiva imersão (100x).
                             </p>
                             <br>
-                            <h3 class="titulo-slider"><span class="figura"><strong>Figura 23.</strong></span> Preparação a fresco de E. coli.</h3>
+                            <h3 class="titulo-slider"><span class="figura"><strong>Figura 23.</strong></span> Preparação a fresco de <i>E. coli.</i></h3>
                             <br> <img class="zoomable"
                                 src="https://res.cloudinary.com/di4ria1pf/image/upload/v1759274386/Figura_23_ldfdh1.jpg"
                                 alt="Células vegetais.">
                             <p class="fonte-imagem"><strong><i>Fonte</strong>: microgen / 123RF.</i></p>
                             <p class="descricao-slider"> <strong>Descrição da imagem:</strong> 
                                 A imagem apresenta uma cena de laboratório durante a preparação a
-                                fresco de uma amostra de Escherichia coli. Duas mãos com luvas azuis manipulam os materiais:
+                                fresco de uma amostra de <i>Escherichia coli</i>. Duas mãos com luvas azuis manipulam os materiais:
                                 a mão esquerda segura uma lâmina de vidro com uma pinça metálica, enquanto a mão direita
                                 utiliza uma alça de inoculação para transferir material de uma placa de Petri posicionada no centro
                                 da imagem. Ao fundo, há outra placa contendo meio de cultura avermelhado. A cena representa
@@ -3320,19 +3393,19 @@
                         <!-- SLIDE 18 -->
                         <div class="slide">
                             <p class="descricao-slider"> <strong>2.</strong>
-                                Preparação a fresco de Saccharomyces cerevisiae. Retirar, com uma alça flambada,
+                                Preparação a fresco de <i>Saccharomyces cerevisiae</i>. Retirar, com uma alça flambada,
                                 uma porção do crescimento da levedura e suspender em uma gota de solução salina em
                                 uma lâmina. Cobrir com lamínula e observar com objetiva de 40x.
                             </p>
                             <br>
-                            <h3 class="titulo-slider"><span class="figura"><strong>Figura 24</strong>.</span> Preparação a fresco de Saccharomyces cerevisiae.</h3>
+                            <h3 class="titulo-slider"><span class="figura"><strong>Figura 24</strong>.</span> Preparação a fresco de <i>Saccharomyces cerevisiae</i>.</h3>
                             <img class="zoomable"
                                 src="https://res.cloudinary.com/di4ria1pf/image/upload/v1759348608/Figura_24_gkdd1i.jpg"
                                 alt="Célula parietal.">
                             <p class="fonte-imagem"><strong><i>Fonte</strong>: UFRGS [s. d.].</i></p>
                             <p class="descricao-slider"> <strong>Descrição da imagem:</strong>
                                 A imagem apresenta um esquema explicativo do processo de preparação
-                                a fresco de Saccharomyces cerevisiae para observação microscópica. No esquema, uma gota
+                                a fresco de <i>Saccharomyces cerevisiae</i> para observação microscópica. No esquema, uma gota
                                 de água destilada ou corante é colocada sobre uma lâmina. Uma lamínula é então posicionada
                                 inclinada e deixada cair suavemente sobre a gota, conforme indicado pela seta vermelha com o
                                 texto “Sentido de queda da lamínula”. As legendas identificam os elementos do processo: lamínula,
@@ -3406,18 +3479,17 @@
                 Técnicas de coloração seguidas de esmagamento normalmente utilizam corantes acéticos – carmim,
                 orceína e hematoxilina, por exemplo –, que apresentam bastante afinidade com o núcleo da célula.
             </p>
-            <p>
-                Assista ao vídeo a seguir:
-            </p>
             <div class="faixa-verde">
                 <h1 class="titulo-secao" style="font-size: 19px !important;">
                     Assista ao vídeo abaixo:
                 </h1>
             </div>
-            <!-- Ícone de Play -->
-            <div class="play-icon" data-video="https://drive.google.com/file/d/1537zxFnQmpPHYGZL-otFflioGDax9Oez/preview"
-                onclick="openVideoModal(this)">
-                <i class='bx bx-play-circle'></i>
+            <div class="video-play-wrapper">
+                <div class="video-play-btn" data-video="https://drive.google.com/file/d/1537zxFnQmpPHYGZL-otFflioGDax9Oez/preview"
+                    onclick="openVideoModal(this)">
+                    <i class='bx bx-play'></i>
+                </div>
+                <div class="video-play-text">Clique para assistir</div>
             </div>
             </div>
             <!-- Modal com o vídeo -->
@@ -3768,7 +3840,7 @@
                         A imagem apresenta um fluxograma ilustrado com as etapas do preparo de uma amostra biológica para observação
                         em microscópio eletrônico de transmissão. No início, fragmentos de tecido de origem vegetal ou animal, ou células
                         isoladas como bactérias,
-                        são submetidos à fixação com glutaraldeído, seguida de pós-fixação com tetróxido de ósmio (OsO4) e lavagens. Em seguida,
+                        são submetidos à fixação com glutaraldeído, seguida de pós-fixação com tetróxido de ósmio (OsO₄) e lavagens. Em seguida,
                         ocorre a
                         desidratação gradual em concentrações crescentes de acetona (25% a 100%) e, depois, a inclusão em resina, também em
                         concentrações
@@ -3814,7 +3886,7 @@
                         (plantas, animais, bactérias,
                         vírus etc.). Amostras biológicas passam por etapas como extração e corte do tecido, seguida de centrifugação (para
                         amostras em suspensão), fixação
-                        com glutaraldeído, pós-fixação com tetróxido de ósmio (OsO4), lavagens sucessivas e desidratação gradual com etanol em
+                        com glutaraldeído, pós-fixação com tetróxido de ósmio (OsO₄), lavagens sucessivas e desidratação gradual com etanol em
                         concentrações crescentes
                         (de 7,5% até 90%). Após a desidratação, a amostra passa pela secagem pelo ponto crítico, um procedimento que evita
                         colapsos estruturais. Em
